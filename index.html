@@ -213,6 +213,9 @@
 
 
         $('#form').validate({
+            success: function () {
+
+            },
             showErrors: function(errorMap, errorList) {
                 this.defaultShowErrors();
             }
@@ -220,12 +223,15 @@
 
         $('#form').on('submit', function (e) {
             e.preventDefault();
-            var form = $(this).serializeArray();
+            var form = $('#form');
+            if (form.valid()) {
+                $.post('https://gridchin.tech/api/pay?section=pre_entry', form.serializeArray(), function (data) {
+                    // document.location.href = '';
+                    alert('Тут будет переадресация на страниу оплаты')
+                })
+            }
 
-            $.post('https://gridchin.tech/api/pay?section=pre_entry', form, function (data) {
-                // document.location.href = '';
-                alert('Тут будет переадресация на страниу оплаты')
-            })
+
         })
         $('.js-create-order').on('click', function (e) {
             e.preventDefault();
