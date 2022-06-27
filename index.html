@@ -6,8 +6,35 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+        body, html {
+            min-height: 100vh;
+        }
+        .main {
+            position: relative;
+        }
+
+        .main .start-date {
+            width: 140px;
+            position: absolute;
+            top: 0;
+            left: 142px;
+        }
+
+        .main .duration {
+            width: 140px;
+            position: absolute;
+            top: 0;
+            left: 10px;
+        }
+    </style>
 </head>
 <body>
-Форма
+<div class="main">
+
+    <img src="/images/duration.svg" class="duration" alt="">
+    <img src="/images/date.svg" class="start-date" alt="">
+</div>
 </body>
 </html>
