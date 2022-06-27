@@ -222,7 +222,7 @@
             e.preventDefault();
             var form = $(this).serializeArray();
 
-            $.post('http://gridchin.tech/api/pay?section=pre_entry', form, function (data) {
+            $.post('https://gridchin.tech/api/pay?section=pre_entry', form, function (data) {
                 // document.location.href = '';
                 alert('Тут будет переадресация на страниу оплаты')
             })
