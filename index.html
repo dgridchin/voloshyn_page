@@ -11,9 +11,14 @@
 
     <style>
         body, html {
-            background: url("./images/main-bg.png") center center no-repeat;
+            background: url("./images/main-bg.png") no-repeat;
             background-size: cover;
             min-height: 100vh;
+        }
+        .main {
+            min-height: 100vh;
+            background: url("./images/bg.svg") top right;
+            background-size: cover;
         }
 
         .container {
@@ -23,12 +28,6 @@
             background-size: 80vh;
         }
 
-
-        .main {
-            min-height: 100vh;
-            background: url("./images/bg.svg") top right;
-            background-size: cover;
-        }
 
         .start-date, .duration {
             position: absolute;
@@ -44,6 +43,12 @@
             left: 180px;
         }
 
+
+
+
+
+
+
         .content {
             padding-top: 220px;
         }
@@ -55,6 +60,78 @@
 
 
 
+        @media screen and (max-width: 639px) {
+            .start-date, .duration {
+                height: 220px;
+            }
+            .duration {
+                left: 10px;
+            }
+            .start-date {
+                left: 140px;
+            }
+
+            /*.container {*/
+            /*    text-align: center;*/
+            /*    background: url("./images/sasha-sm.png") center bottom no-repeat;*/
+            /*    background-size: 100%;*/
+            /*}*/
+
+            /*.content {*/
+            /*    position: relative;*/
+            /*    padding-top: 120px;*/
+            /*}*/
+
+
+            /*.text {*/
+            /*    width: 80% !important;*/
+            /*}*/
+            /*.container p {*/
+            /*    display: block;*/
+            /*    margin: 0 auto;*/
+            /*    width: 60% !important;*/
+            /*    text-align: center;*/
+            /*}*/
+
+            /*.js-create-order {*/
+            /*    margin-top: 0px !important;*/
+            /*}*/
+
+
+
+            .container {
+                background: url("./images/sasha-sm.png") center bottom no-repeat;
+                background-size: 70vh;
+            }
+
+
+
+
+            .content {
+                position: relative;
+                padding-top: 120px;
+            }
+
+            .content .text, .content p, .content .js-create-order {
+                display: block;
+                width: 90% !important;
+                margin: 0 auto;
+            }
+
+            .content .buttons {
+                position: absolute;
+                top: 500px;
+            }
+            .content .buttons .add-text {
+                color: #ffffff !important;
+                font-size: 14px;
+                text-shadow: 0 0 5px #000000;
+            }
+
+
+
+
+        }
 
 
 
@@ -69,18 +146,21 @@
 
 
         <div class="content">
-            <p>
+            <p class="text-secondary">
                 Формат: записанный урок + доп-материалы
             </p>
             <img src="./images/text.png" class="text" alt="">
 
             <br>
-            <a href="javascript: void(0);" class="js-create-order d-block mt-3">
-                <img src="./images/button.png" style="width: 250px" alt="">
-            </a>
-            <p class="w-25 mt-3 text-secondary">
-                Оформляя предзаказ вы резервируете за собой место. После оплаты вам на почту придёт смс с подтверждением об оплате и инструкция с дальнейшими действиями
-            </p>
+            <div class="buttons">
+                <a href="javascript: void(0);" class="js-create-order d-block mt-3">
+                    <img src="./images/button.png" style="width: 250px" alt="">
+                </a>
+                <p class="w-25 mt-3 text-secondary add-text">
+                    Оформляя предзаказ вы резервируете за собой место. После оплаты вам на почту придёт смс с подтверждением об оплате и инструкция с дальнейшими действиями
+                </p>
+            </div>
+
         </div>
 
     </div>
