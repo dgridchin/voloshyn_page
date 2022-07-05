@@ -14,17 +14,52 @@ var getUrlParameter = function getUrlParameter(sParam) {
     return false;
 };
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+}
+
+
+function addSub (text) {
+    $('body').find('.sub-text').remove();
+
+    if (getRandomInt(0, 2)) {
+        $('#video-block').append(
+            $('<span/>')
+                .addClass('sub-text')
+                .css({
+                    'position': 'absolute',
+                    'top': '10px',
+                    'right': '10px',
+                    'color': '#ffffff',
+                    'z-index': '100500',
+                })
+                .html(text)
+        );
+    } else {
+        $('#video-block').append(
+            $('<span/>')
+                .addClass('sub-text')
+                .css({
+                    'position': 'absolute',
+                    'top': '10px',
+                    'left': '10px',
+                    'color': '#ffffff',
+                    'z-index': '100500',
+                })
+                .html(text)
+        );
+    }
+
+
+}
+
 $(function () {
     // position: absolute; top: 10px; left: 10px; color: #ffffff; z-index: 100500;
-    var sub = $('<div/>')
-        .css({
-            'position': 'absolute',
-            'top': '10px',
-            'left': '10px',
-            'color': '#ffffff',
-            'z-index': '100500'
-        })
+
     var mid = getUrlParameter('mid');
+    var subText = null;
     $.ajax({
         type: "POST",
         url: "https://gridchin.tech/api/get_video",
@@ -36,22 +71,11 @@ $(function () {
                 data = JSON.parse(data);
                 if (data.status == 'ok') {
                     $('#loading').hide();
-                    sub.html(data.sub);
                     $('#vimeo').attr('src', data.video)
-                    $('#video-block').append(sub);
-
-                    var oldTime = 0;
-                    var iframe = $('#video-block iframe');
-                    var player = new Vimeo.Player(iframe);
-
-                    player.on('play', function () {
-                        player.getCurrentTime().then(function(seconds) {
-                            if ((seconds - oldTime) > 1) {
-                                console.log(oldTime);
-                                oldTime = seconds;
-                            }
-                        });
-                    })
+                    subText = data.sub;
+                    addSub(subText)
+                } else {
+                    alert('Атата');
                 }
             } else {
                 alert('Произошла системная ошибка. Обновите страницу');
@@ -61,4 +85,10 @@ $(function () {
             alert('Произошла системная ошибка. Обновите страницу');
         }
     });
+
+    var oldTime = 0;
+
+    setInterval(function () {
+        addSub(subText);
+    }, 5000)
 })
