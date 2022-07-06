@@ -55,7 +55,7 @@ function addSub (text) {
 
 }
 
-$(function () {
+$(document).ready(function() {
     // position: absolute; top: 10px; left: 10px; color: #ffffff; z-index: 100500;
 
     var mid = getUrlParameter('mid');
@@ -75,7 +75,7 @@ $(function () {
                     subText = data.sub;
                     addSub(subText)
                 } else {
-                    alert('Атата');
+                    alert('Ссылку менять нельзя!');
                 }
             } else {
                 alert('Произошла системная ошибка. Обновите страницу');
@@ -91,4 +91,10 @@ $(function () {
     setInterval(function () {
         addSub(subText);
     }, 5000)
+});
+
+
+
+$(function () {
+
 })
