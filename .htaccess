@@ -1,9 +1,0 @@
-AddDefaultCharset UTF-8
-RewriteEngine on
-
-#RewriteRule ^sitemap(\d*)\.xml$ sitemap$1.xml [L]
-
-RewriteRule ^(.*)/$ index.html [L]
-RewriteRule (\.html)$ index.html
-RewriteRule (\.xml)$ index.html
-RewriteRule ^([^\.]*)$ index.html
