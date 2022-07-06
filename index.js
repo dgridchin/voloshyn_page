@@ -56,6 +56,76 @@ function addSub (text) {
 }
 
 $(document).ready(function() {
+    var domains = ['http://page.local/', 'https://voloshyn.site/'];
+    var href = document.location.href;
+    href = href.replace(".html", "");
+    domains.forEach(function (domain, index) {
+        href = href.replace(domain, "");
+    })
+
+    if (!href) {
+        href = 'page0';
+    }
+    console.log(href)
+    $('.js-footer').hide();
+    $('#footer-'+href).show();
+
+
+
+    jQuery.extend(jQuery.validator.messages, {
+        required: "Заполните это поле",
+        remote: "Please fix this field.",
+        email: "Укажите корректный email адрес",
+        url: "Please enter a valid URL.",
+        date: "Please enter a valid date.",
+        dateISO: "Please enter a valid date (ISO).",
+        number: "Please enter a valid number.",
+        digits: "Please enter only digits.",
+        creditcard: "Please enter a valid credit card number.",
+        equalTo: "Please enter the same value again.",
+        accept: "Please enter a value with a valid extension.",
+        maxlength: jQuery.validator.format("Please enter no more than {0} characters."),
+        minlength: jQuery.validator.format("Please enter at least {0} characters."),
+        rangelength: jQuery.validator.format("Please enter a value between {0} and {1} characters long."),
+        range: jQuery.validator.format("Please enter a value between {0} and {1}."),
+        max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
+        min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
+    });
+
+
+    $('#form').validate({
+        success: function () {
+
+        },
+        showErrors: function(errorMap, errorList) {
+            this.defaultShowErrors();
+        }
+    });
+
+    $('#form').on('submit', function (e) {
+        e.preventDefault();
+        var form = $('#form');
+        if (form.valid()) {
+            var serverUrl = 'https://gridchin.tech/api/create_order?mid='+getUrlParameter('mid');
+            $.post(serverUrl, form.serializeArray(), function (data) {
+                console.log(data);
+                $('#form').hide();
+                $('#pay-form').hide();
+            })
+        }
+
+
+    })
+    $('.js-create-order').on('click', function (e) {
+        e.preventDefault();
+    })
+
+
+
+
+
+
+
     // position: absolute; top: 10px; left: 10px; color: #ffffff; z-index: 100500;
 
     // var mid = getUrlParameter('mid');
