@@ -58,39 +58,39 @@ function addSub (text) {
 $(document).ready(function() {
     // position: absolute; top: 10px; left: 10px; color: #ffffff; z-index: 100500;
 
-    var mid = getUrlParameter('mid');
-    var subText = null;
-    $.ajax({
-        type: "POST",
-        url: "https://gridchin.tech/api/get_video",
-        data: {
-            mid: mid
-        },
-        success: function(data) {
-            if (data) {
-                data = JSON.parse(data);
-                if (data.status == 'ok') {
-                    $('#loading').hide();
-                    $('#vimeo').attr('src', data.video)
-                    subText = data.sub;
-                    addSub(subText)
-                } else {
-                    alert('Ссылку менять нельзя!');
-                }
-            } else {
-                alert('Произошла системная ошибка. Обновите страницу');
-            }
-        },
-        error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert('Произошла системная ошибка. Обновите страницу');
-        }
-    });
-
-    var oldTime = 0;
-
-    setInterval(function () {
-        addSub(subText);
-    }, 5000)
+    // var mid = getUrlParameter('mid');
+    // var subText = null;
+    // $.ajax({
+    //     type: "POST",
+    //     url: "https://gridchin.tech/api/get_video",
+    //     data: {
+    //         mid: mid
+    //     },
+    //     success: function(data) {
+    //         if (data) {
+    //             data = JSON.parse(data);
+    //             if (data.status == 'ok') {
+    //                 $('#loading').hide();
+    //                 $('#vimeo').attr('src', data.video)
+    //                 subText = data.sub;
+    //                 addSub(subText)
+    //             } else {
+    //                 alert('Ссылку менять нельзя!');
+    //             }
+    //         } else {
+    //             alert('Произошла системная ошибка. Обновите страницу');
+    //         }
+    //     },
+    //     error: function(XMLHttpRequest, textStatus, errorThrown) {
+    //         alert('Произошла системная ошибка. Обновите страницу');
+    //     }
+    // });
+    //
+    // var oldTime = 0;
+    //
+    // setInterval(function () {
+    //     addSub(subText);
+    // }, 5000)
 });
 
 
