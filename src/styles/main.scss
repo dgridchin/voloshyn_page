@@ -1,7 +1,351 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@font-face {
+  font-family: 'Muller';
+  src: url('../../src/fonts/muller/MullerBold.eot');
+  src: local('Muller Bold'), local('MullerBold'),
+  url('../../src/fonts/muller/MullerBold.eot?#iefix') format('embedded-opentype'),
+  url('../../src/fonts/muller/MullerBold.woff2') format('woff2'),
+  url('../../src/fonts/muller/MullerBold.woff') format('woff'),
+  url('../../src/fonts/muller/MullerBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Muller';
+  src: url('../../src/fonts/muller/MullerRegular.eot');
+  src: local('Muller Regular'), local('MullerRegular'),
+  url('../../src/fonts/muller/MullerRegular.eot?#iefix') format('embedded-opentype'),
+  url('../../src/fonts/muller/MullerRegular.woff2') format('woff2'),
+  url('../../src/fonts/muller/MullerRegular.woff') format('woff'),
+  url('../../src/fonts/muller/MullerRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap');
 
 body {
-  background-color: red;
-  color: #000066;
+  font-family: 'Montserrat', sans-serif;
+}
 
+.btn {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  border: none;
+  padding: 2.844rem 1.75rem calc(2.844rem - 6px);
+  border-radius: 20px;
+
+  &.btn-primary:not(:disabled):not(.disabled):active:focus,
+  &.btn-primary:not(:disabled):not(.disabled).active:focus,
+  &.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+  }
+
+  &.btn-primary {
+    background: linear-gradient(274.27deg, rgba(255, 255, 255, 0) -14.6%, rgba(255, 255, 255, 0.21) 39.52%, rgba(255, 255, 255, 0) 110.6%),
+    linear-gradient(156.67deg, #FF2726 -11.63%, #CD0100 70.92%);
+    box-shadow: inset 6.8188px 7.79292px 7.79292px rgba(255, 255, 255, 0.09), inset -4.87057px -1.94823px 7.79292px rgba(255, 255, 255, 0.12);
+    position: relative;
+    border-bottom: 6px solid #CD0100;
+
+    &:hover {
+      opacity: 0.8;
+
+      &:after {
+        opacity: 0.8;
+      }
+    }
+
+//    &:after {
+//      content: '';
+//      position: absolute;
+//      border-radius: 20px;
+//      width: 100%;
+//      height: 100%;
+//      background: linear-gradient(0deg, rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.19)), linear-gradient(274.27deg, rgba(255, 255, 255, 0) -14.6%,
+//        rgba(255, 255, 255, 0.29) 39.52%, rgba(255, 255, 255, 0) 110.6%), linear-gradient(156.67deg, #FF2726 -11.63%, #CD0100 70.92%);
+//      box-shadow: inset 6.8188px 7.79292px 7.79292px rgba(255, 255, 255, 0.09), inset -4.87057px -1.94823px 7.79292px rgba(255, 255, 255, 0.12);
+//      left: 0;
+//      z-index: -1;
+//      top: 4px;
+//    }
+  }
+}
+
+.vp-hero-section {
+  background-image: url('../../images/sections/hero-s-decor.png'), url('../../images/sections/hero-photo.png'), url("../../images/sections/hero-s-bg.png");
+  background-repeat: no-repeat;
+  background-position: top right, top 6px right 32px, top center;
+
+  > .container {
+    position: relative;
+    padding-top: 234px;
+    padding-bottom: 150px;
+  }
+
+  .hero-label {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: -37px;
+
+    &.date-label {
+      left: 159px;
+    }
+  }
+
+  .hero-title {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 2;
+
+    rect {
+      width: 719px;
+      height: 308px;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .btn-primary {
+    min-width: 404px;
+    margin-top: 14px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+    margin-bottom: 20px;
+    max-width: 566px;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.vp-review-section {
+  padding-top: 214px;
+  background: url('../../images/sections/review-top-bg.png') top center no-repeat;
+  margin-top: -44px;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #090909 url('../../images/sections/review-decor-bg.png') top center no-repeat;
+    top: 80px;
+    left: 0;
+    z-index: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 171px;
+    height: 151px;
+    top: 200px;
+    background: url("../../images/icon-users.png") no-repeat center;
+    right: 130px;
+    z-index: 3;
+  }
+
+  .inner-bg-container {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 184px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 163px;
+      height: 216px;
+      bottom: 50px;
+      background: url("../../images/icon-instagram.png") no-repeat center;
+      left: 0;
+      z-index: 3;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 86px;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1340px;
+    }
+  }
+}
+
+.vp-media-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 12px;
+
+  .img-wrap {
+    flex: 0 0 82px;
+    margin-right: 22px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0;
+      height: auto;
+    }
+  }
+
+  .info-wrap {
+    font-family: 'Muller';
+    font-weight: 400;
+    line-height: 15px;
+    font-size: 18px;
+    color: #fff;
+
+    strong {
+      display: block;
+      font-weight: 800;
+      line-height: 15px;
+      font-size: 18px;
+      color: #fff;
+      margin-top: 12px;
+    }
+  }
+}
+
+.vp-who-section {
+  position: relative;
+  background: url('../../images/sections/phone-bg.png') bottom 280px right no-repeat, url("../../images/sections/confetti-bg.png") top -380px center no-repeat;
+  padding-top: 206px;
+  padding-bottom: 240px;
+
+  .btn-primary {
+    min-width: 500px;
+    margin-top: 70px;
+  }
+
+  .section-title {
+    margin-bottom: 55px;
+
+    svg {
+      display: block;
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -122px;
+    width: 506px;
+    height: 595px;
+    background: url("../../images/decor-line-red.png") no-repeat center;
+    z-index: 10;
+  }
+
+  .steps-list-item {
+    padding-bottom: 60px;
+    padding-right: 30px;
+    padding-top: 30px;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+
+    &:nth-child(even) {
+      padding-left: 40px;
+      border-right: none;
+    }
+  }
+
+  .steps-list {
+    max-width: 768px;
+    margin-bottom: 74px;
+
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+      color: #0E0E0E;
+      padding-top: 10px;
+      max-width: 300px;
+    }
+
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    & + p {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 140%;
+      color: #0E0E0E;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.vp-text-section {
+  background: linear-gradient(270deg, #D80023 -26.27%, #FC2144 30.29%, #D80023 66.22%, #FF0000 126.54%);
+  border-radius: 10px;
+  padding: 140px 0 95px;
+  position: relative;
+
+  > .container {
+    padding-left: 402px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 694px;
+    height: 1016px;
+    background: url(../../images/sections/dollar-bg.png) left center no-repeat;
+  }
+
+  svg {
+    margin-bottom: 40px;
+    display: block;
+    max-width: 100%;
+  }
+
+  p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 140%;
+    color: #FFFFFF;
+  }
+}
+
+.vp-lesson-section {
+  background: url(../../images/sections/big-section-bg.png) top center no-repeat;
+  min-height: 2000px;
+  margin-top: -44px;
+  position: relative;
 }
