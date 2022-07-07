@@ -455,6 +455,8 @@ body {
 }
 
 .vp-sub-lesson {
+  margin-bottom: 152px;
+
   .card {
     max-width: 1596px;
     margin: 0 auto;
@@ -466,5 +468,100 @@ body {
     .card-body {
       padding: 92px 80px 146px;
     }
+  }
+}
+
+.vp-footer-section {
+  background: url("../../images/sections/footer-bg.png") top center no-repeat;
+  padding-top: 420px;
+  padding-bottom: 60px;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 640px;
+    height: 610px;
+    background: url("../../images/b-card.png") no-repeat center;
+    right: 0;
+    z-index: 10;
+    top: -288px;
+  }
+
+  .accordion {
+    margin: 0 auto 128px;
+    max-width: 760px;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    a {
+      margin: 0 10px 10px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #BDBDBD;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.accordion {
+  .accordion-button {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #161618;
+    padding: 23px 70px 25px 35px;
+    background: #FFFFFF;
+    border-radius: 10px !important;
+  }
+
+  .accordion-body {
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 24px 35px 26px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #161618;
+  }
+
+  .accordion-button:after {
+    width: 45px;
+    height: 45px;
+    background-image: url("../../images/icon-plus.svg");
+    background-size: 45px 45px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -22.5px;
+  }
+
+  .accordion-button:not(.collapsed):after {
+    background-image: url("../../images/icon-plus.svg");
+    transform: rotate(-45deg);
+  }
+
+  .accordion-header {
+    margin-bottom: 10px;
+  }
+
+  .accordion-item {
+    border-radius: 0 !important;
+    background-color: transparent;
+    border: none;
   }
 }
