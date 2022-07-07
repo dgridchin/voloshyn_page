@@ -128,7 +128,7 @@
 
             <br>
             <div class="buttons">
-                <a href="javascript: void(0);" class="js-create-order d-block mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <a href="javascript: void(0);" class="js-create-order d-block mt-3" >
                     <img src="./images/button.png" style="width: 250px" alt="">
                 </a>
                 <p class="w-25 mt-3 text-secondary add-text">
@@ -173,28 +173,6 @@
                 </div>
                 <input type="submit" name="save" class="btn btn-dark btn-lg w-100" value="Перейти к оплате">
             </div>
-        </form>
-
-        <form method="post" action="https://secure.wayforpay.com/pay" id="pay-form" accept-charset="utf-8" style="display: none;">
-            <input name="merchantAccount" value="voloshyn_site">
-            <input name="merchantAuthType" value="SimpleSignature">
-            <input name="merchantDomainName" value="voloshyn.site">
-            <input name="merchantSignature" value="b95932786cbe243a76b014846b63fe92">
-            <input name="orderReference" value="DH783023">
-            <input name="orderDate" value="1415379863">
-            <input name="amount" value="1547.36">
-            <input name="currency" value="UAH">
-            <input name="orderTimeout" value="49000">
-            <input name="productName[]" value="Процессор Intel Core i5-4670 3.4GHz">
-            <input name="productName[]" value="Память Kingston DDR3-1600 4096MB PC3-12800">
-            <input name="productPrice[]" value="1000">
-            <input name="productPrice[]" value="547.36">
-            <input name="productCount[]" value="1">
-            <input name="productCount[]" value="1">
-            <input name="clientFirstName" value="Вася">
-            <input name="clientEmail" value="some@mail.com">
-            <input name="defaultPaymentSystem" value="card">
-            <button type="submit">Оплатить</button>
         </form>
     </div>
 </div>
