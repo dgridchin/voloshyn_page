@@ -63,6 +63,20 @@ $(document).ready(function() {
         {'link': 'https://secure.wayforpay.com/button/bf3508bef3322', 'block': 'page2', 'm': 'site5'},
         {'link': 'https://secure.wayforpay.com/button/bc8b3371b6c09', 'block': 'page2', 'm': 'site6'},
         {'link': 'https://secure.wayforpay.com/button/b0a4b342130a1', 'block': 'page2', 'm': 'site7'},
+        {'link': 'https://secure.wayforpay.com/button/be5c512ba9293', 'block': 'page2', 'm': 'site8'},
+        {'link': 'https://secure.wayforpay.com/button/b79d77135b072', 'block': 'page2', 'm': 'site9'},
+        {'link': 'https://secure.wayforpay.com/button/b92e359f37858', 'block': 'page2', 'm': 'site10'},
+        {'link': 'https://secure.wayforpay.com/button/b3493d32d2337', 'block': 'page2', 'm': 'site11'},
+        {'link': 'https://secure.wayforpay.com/button/b6dd479320c72', 'block': 'page2', 'm': 'site12'},
+        {'link': 'https://secure.wayforpay.com/button/b46561fc4b8bc', 'block': 'page2', 'm': 'site13'},
+        {'link': 'https://secure.wayforpay.com/button/b0e7f25aeadb7', 'block': 'page2', 'm': 'site14'},
+
+        {'link': 'https://secure.wayforpay.com/button/b53792990be55', 'block': 'page3', 'm': 'site15'},
+        {'link': 'https://secure.wayforpay.com/button/baa57f4075c26', 'block': 'page3', 'm': 'site16'},
+        {'link': 'https://secure.wayforpay.com/button/baefa5da66e22', 'block': 'page3', 'm': 'site17'},
+        {'link': 'https://secure.wayforpay.com/button/bc8e803f80ffb', 'block': 'page3', 'm': 'site18'},
+        {'link': 'https://secure.wayforpay.com/button/b1bcae12d4ccd', 'block': 'page3', 'm': 'site19'},
+        {'link': 'https://secure.wayforpay.com/button/b510df91848ee', 'block': 'page3', 'm': 'site20'},
     ];
 
     var d = [
