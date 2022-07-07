@@ -21,7 +21,7 @@
   font-weight: 400;
   font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;900&display=swap');
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -325,6 +325,7 @@ body {
     width: 694px;
     height: 1016px;
     background: url(../../images/sections/dollar-bg.png) left center no-repeat;
+    margin-top: -104px;
   }
 
   svg {
@@ -345,7 +346,125 @@ body {
 
 .vp-lesson-section {
   background: url(../../images/sections/big-section-bg.png) top center no-repeat;
-  min-height: 2000px;
   margin-top: -44px;
+  padding-top: 222px;
+  padding-bottom: 648px;
   position: relative;
+  overflow: hidden;
+
+  .section-title {
+    margin-bottom: 66px;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+
+  .lesson-total-item {
+    margin-bottom: 70px;
+
+    img {
+      margin-bottom: 44px;
+    }
+
+    p {
+      font-family: 'Muller';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.vp-tariff-panel {
+  max-width: 1380px;
+  margin: 0 auto;
+  border: 6px solid #FF0000;
+  border-radius: 10px;
+  background: #fff url("../../images/tariff-bg.png");
+  padding: 97px 90px 80px;
+
+  ul {
+    margin: 0;
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: #0E0E0E;
+    max-width: 514px;
+
+    li {
+      margin-bottom: 28px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.vp-student-section {
+  margin-top: -390px;
+
+  .right-title {
+    margin-bottom: 42px;
+    margin-top: 10px;
+  }
+
+  .vp-media-item {
+    margin-bottom: 14px;
+  }
+
+  .card-body {
+    padding: 32px 38px;
+
+    p {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 20px;
+      color: #0E0E0E;
+      margin-bottom: 22px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .str-deco {
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: #0E0E0E;
+      }
+    }
+  }
+
+  .name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #8E8E8E;
+  }
+}
+
+.vp-sub-lesson {
+  .card {
+    max-width: 1596px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 80px rgba(0, 0, 0, 0.08), 0px 6.26664px 33.4221px rgba(0, 0, 0, 0.0575083), 0px 3.35045px 17.869px rgba(0, 0, 0, 0.0476886), 0px 1.87823px 10.0172px rgba(0, 0, 0, 0.04), 0px 0.997515px 5.32008px rgba(0, 0, 0, 0.0323114), 0px 0.415088px 2.21381px rgba(0, 0, 0, 0.0224916);
+    border-radius: 10px;
+    border: none;
+
+    .card-body {
+      padding: 92px 80px 146px;
+    }
+  }
 }
