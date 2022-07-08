@@ -352,6 +352,13 @@ body {
   position: relative;
   overflow: hidden;
 
+  .container-fluid.lesson-main-img {
+    @media (min-width: 1520px) {
+      max-width: 1520px;
+      margin-bottom: 180px;
+    }
+  }
+
   .section-title {
     margin-bottom: 66px;
 
@@ -770,16 +777,17 @@ body {
     .inner-bg-container {
       padding-bottom: 164px;
       > .container {
-        max-width: 220px;
+//        max-width: 220px;
       }
     }
   }
 
   .vp-who-section{
     padding-top: 68px;
-    padding-bottom: 580px;
-    background: url("../../images/iphone-mob.png") bottom -30px center no-repeat, url("../../images/sections/confetti-bg.png") top -380px center no-repeat;
-    background-size: 50% auto, cover;
+    padding-bottom: 0;
+//    background: url("../../images/iphone-mob.png") bottom -30px center no-repeat, url("../../images/sections/confetti-bg.png") top -380px center no-repeat;
+    background: url("../../images/sections/confetti-bg.png") top -380px center no-repeat;
+    background-size: cover;
 
     &:after {
       width: 125px;
@@ -961,6 +969,10 @@ body {
     background-position: top right, bottom -180px center, top center;
     background-size: auto, 100% auto, cover;
   }
+
+  .vp-review-section .inner-bg-container>.container {
+    max-width: 240px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -976,8 +988,8 @@ body {
   }
 
   .vp-who-section {
-    background: url("../../images/iphone-mob.png") bottom -180px center no-repeat,url("../../images/sections/confetti-bg.png") top -380px center no-repeat;
-    background-size: 100% auto, cover;
+    background: url("../../images/sections/confetti-bg.png") top -380px center no-repeat;
+    background-size: cover;
   }
 }
 
