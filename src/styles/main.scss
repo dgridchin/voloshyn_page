@@ -565,3 +565,418 @@ body {
     border: none;
   }
 }
+
+@media (max-width: 1680px) {
+  .vp-hero-section {
+    background-size: auto, 50% auto, cover;
+
+    .hero-title {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      max-width: 500px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  .vp-who-section {
+    background-size: 86% auto, cover;
+  }
+
+  .vp-text-section{
+    >.container {
+      padding-left: 460px;
+    }
+
+    &:after {
+      width: 609px;
+      height: 900px;
+      margin-top: -30px;
+      background-size: 100% auto;
+    }
+
+  }
+}
+
+@media (max-width: 1380px) {
+  .vp-hero-section {
+    background-position: top right, bottom -100px right 32px, top center;
+  }
+
+  .vp-review-section {
+    &:before {
+      display: none;
+    }
+
+    .inner-bg-container {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .vp-media-item {
+    .img-wrap {
+      flex: 0 0 68px;
+      margin-right: 16px;
+    }
+
+    .info-wrap {
+      line-height: 15px;
+      font-size: 14px;
+
+      strong {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1280px) {
+  .vp-who-section {
+    padding-bottom: 120px;
+
+    .steps-list {
+      max-width: 580px;
+
+      p {
+        font-size: 14px;
+        line-height: normal;
+      }
+    }
+
+    .pre-cta-title {
+      max-width: 76%;
+      height: auto;
+      display: block;
+    }
+
+    .cta-block {
+      max-width: 76% !important;
+    }
+  }
+}
+
+.vp-lesson-steps-mob {
+  max-width: 240px;
+  margin: 0 auto 60px;
+
+  svg {
+    margin-bottom: 10px;
+    display: block;
+  }
+  p {
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: #FFFFFF;
+  }
+}
+
+@media (max-width: 992px) {
+  .btn {
+    font-weight: 700;
+    font-size: 11.4344px;
+    line-height: 13px;
+    letter-spacing: 0.4em;
+    padding: 1.68rem 1.75rem calc(1.68rem - 6px);
+  }
+  .vp-hero-section {
+    background-image: url('../../images/sections/hero-s-decor.png'), url('../../images/sections/hero-photo.png'), url("../../images/sections/mob-hero-bg.png");
+    background-position: top right, bottom -290px center, top center;
+    background-size: auto, 90% auto, cover;
+
+    .btn.btn-primary {
+      min-width: 242px;
+    }
+
+    p {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 15px;
+      color: #0E0E0E;
+    }
+
+    .hero-cta-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 23px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .btn {
+        order: 1;
+        margin: 0 0 12px 0;
+      }
+
+      p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 9px;
+        line-height: 12px;
+        text-align: center;
+        color: #FFFFFF;
+        order: 2;
+      }
+    }
+
+    .hero-label {
+      width: 164px;
+      left: -30px;
+      height: auto;
+
+      &.date-label {
+        left: 90px;
+      }
+    }
+
+    .hero-title {
+      max-width: 286px;
+    }
+
+    > .container {
+      padding-top: 130px;
+      padding-bottom: 430px;
+    }
+  }
+
+  .vp-review-section {
+    padding-top: 96px;
+
+    &:after {
+      background-size: cover;
+    }
+
+    .section-title {
+      margin-bottom: 20px;
+    }
+
+    .inner-bg-container {
+      padding-bottom: 164px;
+      > .container {
+        max-width: 220px;
+      }
+    }
+  }
+
+  .vp-who-section{
+    padding-top: 68px;
+    padding-bottom: 580px;
+    background: url("../../images/iphone-mob.png") bottom -30px center no-repeat, url("../../images/sections/confetti-bg.png") top -380px center no-repeat;
+    background-size: 50% auto, cover;
+
+    &:after {
+      width: 125px;
+      height: 144px;
+      background-size: cover;
+      top: -56px;
+    }
+
+    .steps-list {
+      margin-bottom: 20px;
+    }
+
+    .steps-list-item {
+      border: none !important;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      &:nth-child(even) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .row.steps-list {
+      & + p {
+        margin-left: -15px;
+        font-size: 11px;
+      }
+    }
+
+    .mb-img-w-block {
+      margin-left: -15px;
+    }
+  }
+
+  .vp-text-section {
+    background: url("../../images/red-circle-mob.png") top center;
+    border-radius: 0;
+    padding-top: 56px;
+    padding-bottom: 312px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 340px;
+      background: url("../../images/dollar-mob.png") top center no-repeat;
+      background-size: cover;
+    }
+
+    p {
+      font-size: 12px;
+      text-align: center;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    >.container {
+      padding-left: 15px;
+    }
+  }
+
+  .vp-lesson-section {
+    padding-top: 60px;
+  }
+
+  .vp-lesson-section {
+    padding-bottom: 450px;
+    .lesson-total-item {
+      margin-bottom: 28px;
+      p {
+        font-size: 11px;
+        line-height: normal;
+      }
+
+      img {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  .vp-tariff-panel {
+    max-width: 86%;
+    padding: 36px 30px;
+
+    .col-md-4 .d-block.img-fluid {
+      max-width: 100px;
+      height: auto;
+    }
+
+    .mb-5 {
+      margin-bottom: 20px !important;
+    }
+
+    .btn {
+      max-width: 212px;
+      margin: 0 auto;
+    }
+
+    ul {
+      margin-bottom: 26px;
+      li {
+        font-family: 'Muller';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        margin-bottom: 12px;
+        color: #0E0E0E;
+      }
+    }
+  }
+
+  .vp-student-section {
+    background: url("../../images/bg-black-mob.png") bottom center no-repeat;
+    padding-bottom: 195px;
+  }
+
+  .vp-sub-lesson {
+    margin-top: -155px;
+    margin-bottom: 100px;
+
+    .card {
+      max-width: calc(100% - 30px);
+      margin-left: auto;
+      margin-right: auto;
+
+      .card-body {
+        padding: 30px 36px;
+      }
+    }
+  }
+
+  .vp-footer-section {
+    padding-top: 100px;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 112px;
+      height: 180px;
+      background: url(../../images/b-card.png) no-repeat left center;
+      right: 0;
+      z-index: 10;
+      top: -74px;
+      background-size: cover;
+    }
+  }
+
+  .accordion .accordion-body, .accordion .accordion-button {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .vp-footer-section .accordion {
+    margin-bottom: 44px;
+  }
+
+  .vp-footer-section .footer-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vp-who-section {
+    .container {
+      padding: 0 30px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .vp-hero-section {
+    background-position: top right, bottom -180px center, top center;
+    background-size: auto, 100% auto, cover;
+  }
+}
+
+@media (max-width: 420px) {
+  .vp-hero-section {
+    .hero-label {
+      left: -15px;
+      height: auto;
+    }
+
+    .hero-label.date-label {
+      left: 100px;
+    }
+  }
+
+  .vp-who-section {
+    background: url("../../images/iphone-mob.png") bottom -180px center no-repeat,url("../../images/sections/confetti-bg.png") top -380px center no-repeat;
+    background-size: 100% auto, cover;
+  }
+}
+
