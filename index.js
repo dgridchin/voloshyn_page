@@ -99,7 +99,7 @@ $(document).ready(function() {
 
 
 
-    var domains = ['http://page.local/', 'https://voloshyn.site/'];
+    var domains = ['http://page.local/', 'https://voloshyn.site/', 'https://voloshyn-lesson.online/'];
     var href = document.location.href;
     href = href.replace(".html", "");
     domains.forEach(function (domain, index) {
