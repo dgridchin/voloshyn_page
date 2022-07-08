@@ -481,9 +481,13 @@ body {
 .vp-footer-section {
   background: url("../../images/sections/footer-bg.png") top center no-repeat;
   background-size: cover;
-  padding-top: 420px;
+  padding-top: 160px;
   padding-bottom: 60px;
   position: relative;
+
+  .footer-desk-title {
+    margin-bottom: 38px;
+  }
 
   &:after {
     content: '';
