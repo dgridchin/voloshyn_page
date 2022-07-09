@@ -487,6 +487,8 @@ body {
 
   .footer-desk-title {
     margin-bottom: 38px;
+    position: relative;
+    z-index: 11;
   }
 
   &:after {
