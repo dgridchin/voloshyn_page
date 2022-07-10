@@ -91,6 +91,10 @@ $(document).ready(function() {
         {'link': 'https://secure.wayforpay.com/button/b142eefe2452b', 'block': 'page8', 'm': 'site90'},
         {'link': 'https://secure.wayforpay.com/button/bce62d76ca3f2', 'block': 'page8', 'm': 'site91'},
         {'link': 'https://secure.wayforpay.com/button/b1a7a9dd9752b', 'block': 'page8', 'm': 'site92'},
+
+        {'link': 'https://secure.wayforpay.com/button/b9c82421539bb', 'block': 'page9', 'm': 'site93'},
+        {'link': 'https://secure.wayforpay.com/button/b9266631b0163', 'block': 'page9', 'm': 'site94'},
+        {'link': 'https://secure.wayforpay.com/button/b977b7833bcad', 'block': 'page9', 'm': 'site95'},
     ];
 
     var d = [
