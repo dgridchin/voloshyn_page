@@ -127,95 +127,32 @@ $(document).ready(function() {
 
 
 
-    // jQuery.extend(jQuery.validator.messages, {
-    //     required: "Заполните это поле",
-    //     remote: "Please fix this field.",
-    //     email: "Укажите корректный email адрес",
-    //     url: "Please enter a valid URL.",
-    //     date: "Please enter a valid date.",
-    //     dateISO: "Please enter a valid date (ISO).",
-    //     number: "Please enter a valid number.",
-    //     digits: "Please enter only digits.",
-    //     creditcard: "Please enter a valid credit card number.",
-    //     equalTo: "Please enter the same value again.",
-    //     accept: "Please enter a value with a valid extension.",
-    //     maxlength: jQuery.validator.format("Please enter no more than {0} characters."),
-    //     minlength: jQuery.validator.format("Please enter at least {0} characters."),
-    //     rangelength: jQuery.validator.format("Please enter a value between {0} and {1} characters long."),
-    //     range: jQuery.validator.format("Please enter a value between {0} and {1}."),
-    //     max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
-    //     min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
-    // });
-    //
-    //
-    // $('#form').validate({
-    //     success: function () {
-    //
-    //     },
-    //     showErrors: function(errorMap, errorList) {
-    //         this.defaultShowErrors();
-    //     }
-    // });
-    //
-    // $('#form').on('submit', function (e) {
-    //     e.preventDefault();
-    //     var form = $('#form');
-    //     if (form.valid()) {
-    //         var serverUrl = 'https://gridchin.tech/api/create_order?mid='+getUrlParameter('mid');
-    //         $.post(serverUrl, form.serializeArray(), function (data) {
-    //             console.log(data);
-    //             $('#form').hide();
-    //             $('#pay-form').hide();
-    //         })
-    //     }
-    //
-    //
-    // })
-    // $('.js-create-order').on('click', function (e) {
-    //     e.preventDefault();
-    // })
+    var minutes = 14;
+    var seconds = 59;
+    setInterval(function () {
+        console.log(123)
+        seconds--;
+        if (seconds <= 0) {
+            seconds = 59;
+            minutes--;
+        }
 
+        var secText = seconds;
+        var minText = minutes;
 
+        if (seconds <= 9) {
+            secText = '0'+seconds;
+        }
+        if (minutes <= 9) {
+            minText = '0'+minutes;
+        }
 
+        document.getElementById('timer-seconds').innerHTML = secText;
+        document.getElementById('timer-minutes').innerHTML = minText;
 
+        if (minutes < 0) document.location.reload();
 
-
-
-    // position: absolute; top: 10px; left: 10px; color: #ffffff; z-index: 100500;
-
-    // var mid = getUrlParameter('mid');
-    // var subText = null;
-    // $.ajax({
-    //     type: "POST",
-    //     url: "https://gridchin.tech/api/get_video",
-    //     data: {
-    //         mid: mid
-    //     },
-    //     success: function(data) {
-    //         if (data) {
-    //             data = JSON.parse(data);
-    //             if (data.status == 'ok') {
-    //                 $('#loading').hide();
-    //                 $('#vimeo').attr('src', data.video)
-    //                 subText = data.sub;
-    //                 addSub(subText)
-    //             } else {
-    //                 alert('Ссылку менять нельзя!');
-    //             }
-    //         } else {
-    //             alert('Произошла системная ошибка. Обновите страницу');
-    //         }
-    //     },
-    //     error: function(XMLHttpRequest, textStatus, errorThrown) {
-    //         alert('Произошла системная ошибка. Обновите страницу');
-    //     }
-    // });
-    //
-    // var oldTime = 0;
-    //
-    // setInterval(function () {
-    //     addSub(subText);
-    // }, 5000)
+    }, 1000);
 });
 
 
