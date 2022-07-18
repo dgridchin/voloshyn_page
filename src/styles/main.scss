@@ -617,7 +617,7 @@ body {
   }
 
   .vp-who-section {
-    background-size: 86% auto, cover;
+    background-size: 40% auto, cover;
   }
 
   .vp-text-section{
@@ -790,6 +790,10 @@ body {
 
   .vp-review-section {
     padding-top: 96px;
+
+    .container.video-container {
+      max-width: 100% !important;
+    }
 
     &:after {
       background-size: cover;
