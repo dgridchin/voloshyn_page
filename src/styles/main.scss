@@ -77,6 +77,39 @@ body {
   }
 }
 
+.vp-action-counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .counter-number, .divider {
+//    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 290.325px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  .description {
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26.7992px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+  }
+
+  .counter-cell {
+    margin: 0 38px 40px;
+  }
+}
+
 .vp-hero-section {
   background-image: url('../../images/sections/hero-s-decor.png'), url('../../images/sections/hero-photo.png'), url("../../images/sections/hero-s-bg.png");
   background-repeat: no-repeat;
@@ -716,6 +749,22 @@ body {
 }
 
 @media (max-width: 992px) {
+  .vp-action-counter {
+
+    .counter-number, .divider {
+      font-size:92px;
+    }
+
+    .description {
+      font-size: 10px;
+      letter-spacing: normal;
+    }
+
+    .counter-cell {
+      margin: 0 20px 30px;
+    }
+  }
+
   .btn {
     font-weight: 700;
     font-size: 15px;
