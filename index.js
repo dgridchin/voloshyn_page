@@ -126,19 +126,9 @@ $(document).ready(function() {
 
     var item = links[Math.floor(Math.random()*links.length)];
 
-    // href = item.block;
     var link = item.link;
-    if (href) {
-        link = link + href;
-    }
-    console.log(href);
-    console.log(link);
-
     $('.js-create-order').attr('href', link)
-
-    // $('.js-footer').hide();
-    // $('#footer-'+href).show();
-
+    
 
 
     var minutes = 14;
