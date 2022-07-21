@@ -1,60 +1,3 @@
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = window.location.search.substring(1),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-        }
-    }
-    return false;
-};
-
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
-}
-
-
-function addSub (text) {
-    $('body').find('.sub-text').remove();
-
-    if (getRandomInt(0, 2)) {
-        $('#video-block').append(
-            $('<span/>')
-                .addClass('sub-text')
-                .css({
-                    'position': 'absolute',
-                    'top': '10px',
-                    'right': '10px',
-                    'color': '#ffffff',
-                    'z-index': '100500',
-                })
-                .html(text)
-        );
-    } else {
-        $('#video-block').append(
-            $('<span/>')
-                .addClass('sub-text')
-                .css({
-                    'position': 'absolute',
-                    'top': '10px',
-                    'left': '10px',
-                    'color': '#ffffff',
-                    'z-index': '100500',
-                })
-                .html(text)
-        );
-    }
-
-
-}
-
 $(document).ready(function() {
     var links = [
         // {'link': 'https://secure.wayforpay.com/button/bbc0402c266b2', 'block': 'page2', 'm': 'site2'},
@@ -124,11 +67,12 @@ $(document).ready(function() {
     }
 
 
-    var item = links[Math.floor(Math.random()*links.length)];
+    var item = links[Math.floor(Math.random() * links.length)];
+    console.log(item);
 
     var link = item.link;
     $('.js-create-order').attr('href', link)
-    
+
 
 
     var minutes = 14;
@@ -157,9 +101,3 @@ $(document).ready(function() {
 
     }, 1000);
 });
-
-
-
-$(function () {
-
-})
