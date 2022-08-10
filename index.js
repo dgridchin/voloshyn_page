@@ -34,10 +34,10 @@ $(document).ready(function() {
         // {'link': 'https://secure.wayforpay.com/button/b142eefe2452b', 'block': 'page8', 'm': 'site90'},
         // {'link': 'https://secure.wayforpay.com/button/bce62d76ca3f2', 'block': 'page8', 'm': 'site91'},
         // {'link': 'https://secure.wayforpay.com/button/b1a7a9dd9752b', 'block': 'page8', 'm': 'site92'},
-        //
         {'link': 'https://secure.wayforpay.com/button/b9c82421539bb', 'block': 'page9', 'm': 'site93'},
         {'link': 'https://secure.wayforpay.com/button/b9266631b0163', 'block': 'page9', 'm': 'site94'},
 
+        // https://gridchin.tech/api/redirect?page=2&status=success
         // {'link': 'https://secure.wayforpay.com/button/b977b7833bcad', 'block': 'page9', 'm': 'site95'},
 
 
@@ -61,15 +61,25 @@ $(document).ready(function() {
     })
 
     if (!href) {
-        href = 'page0';
+        href = 'page9';
+    }
+
+    if (href == 'page0' || href == 'page1' || href == 'page2' || href == 'page3' || href == 'page4' || href == 'page5' || href == 'page6' || href == 'page7' || href == 'page8' || href == 'page9') {
+        $('.js-footer').hide();
+        $('#footer-'+href).show();
     }
 
 
     var item = links[Math.floor(Math.random() * links.length)];
-    console.log(item);
 
     var link = item.link;
     $('.js-create-order').attr('href', link)
+
+
+
+
+
+
 
 
 
