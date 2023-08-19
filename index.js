@@ -37,7 +37,7 @@ $(document).ready(function() {
         {'link': 'https://secure.wayforpay.com/button/b9c82421539bb', 'block': 'page9', 'm': 'site93'},
         {'link': 'https://secure.wayforpay.com/button/b9266631b0163', 'block': 'page9', 'm': 'site94'},
 
-        // https://gridchin.tech/api/redirect?page=2&status=success
+        // https://crm.nexvel.education/api/redirect?page=2&status=success
         // {'link': 'https://secure.wayforpay.com/button/b977b7833bcad', 'block': 'page9', 'm': 'site95'},
 
 
@@ -64,7 +64,25 @@ $(document).ready(function() {
         href = 'page9';
     }
 
-    if (href == 'page0' || href == 'page1' || href == 'page2' || href == 'page3' || href == 'page4' || href == 'page5' || href == 'page6' || href == 'page7' || href == 'page8' || href == 'page9') {
+
+
+    if (
+        href == 'page8' ||
+        href == 'page1' ||
+        href == 'page9' ||
+        href == 'page14' ||
+        href == 'page3' ||
+        href == 'page11' ||
+        href == 'page4' ||
+        href == 'page13' ||
+        href == 'page15' ||
+        href == 'page16' ||
+        href == 'page17' ||
+        href == 'page12' ||
+        href == 'page5' ||
+        href == 'page18' ||
+        href == 'page6'
+    ) {
         $('.js-footer').hide();
         $('#footer-'+href).show();
     }
