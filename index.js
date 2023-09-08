@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 
 
-        // {'link': '', 'block': 'page8', 'm': 'site83'},
+        {'link': '', 'block': 'page9', 'm': '?'},
         // {'link': '', 'block': 'page8', 'm': 'site84'},
         // {'link': '', 'block': 'page8', 'm': 'site85'},
     ];
@@ -65,7 +65,6 @@ $(document).ready(function() {
     }
 
 
-    alert(href);
 
     if (
         href == 'page8' ||
