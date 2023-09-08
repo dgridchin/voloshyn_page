@@ -65,6 +65,7 @@ $(document).ready(function() {
     }
 
 
+    alert(href);
 
     if (
         href == 'page8' ||
